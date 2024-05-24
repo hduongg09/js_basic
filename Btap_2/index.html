@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <p>Commands: C (Create), R (Read), U (Update), D (Delete), Q (Quit)</p>
+    <input type="text" id="commandInput" placeholder="Enter command">
+    <button onclick="executeCommand()">Submit</button>
+    <div id="output"></div>
+    <script>
+        const todoList = ["Go to bed at 11pm", "Do homework at 8pm"];
+
+        function displayTodoList() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<h2>Current todo list:</h2>';
+            todoList.forEach((todo, index) => {
+                output.innerHTML += `<p>${index + 1}. ${todo}</p>`;
+            });
+            output.innerHTML += '<br>';
+        }
+
+        function addTodo() {
+            const newTodo = prompt("Enter a new todo:");
+            if (newTodo) {
+                todoList.push(newTodo);
+                displayTodoList();
+            } else {
+                alert("Invalid input. Todo not added.");
+            }
+        }
+
+        function readTodos() {
+            displayTodoList();
+        }
+
+        function updateTodo() {
+            const position = parseInt(prompt("Enter the position of the todo to update:"), 10);
+            if (position > 0 && position <= todoList.length) {
+                const newContent = prompt("Enter the new content:");
+                if (newContent) {
+                    todoList[position - 1] = newContent;
+                    displayTodoList();
+                } else {
+                    alert("Invalid input. Todo not updated.");
+                }
+            } else {
+                alert("Invalid position.");
+            }
+        }
+
+        function deleteTodo() {
+            const position = parseInt(prompt("Enter the position of the todo to delete:"), 10);
+            if (position > 0 && position <= todoList.length) {
+                todoList.splice(position - 1, 1);
+                displayTodoList();
+            } else {
+                alert("Invalid position.");
+            }
+        }
+
+        function executeCommand() {
+            const command = document.getElementById('commandInput').value.toUpperCase();
+            document.getElementById('commandInput').value = '';
+            switch (command) {
+                case "C":
+                    addTodo();
+                    break;
+                case "R":
+                    readTodos();
+                    break;
+                case "U":
+                    updateTodo();
+                    break;
+                case "D":
+                    deleteTodo();
+                    break;
+                case "Q":
+                    alert("Exiting the application.");
+                    break;
+                default:
+                    alert("Invalid command.");
+            }
+        }
+
+        // Display initial todo list
+        displayTodoList();
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="main.js"></script>
+</body>
+</html>
